@@ -1,4 +1,4 @@
-obj-m = my_blocking_driver.o
+obj-m = my_input_driver.o
 
 KDIR = /root/htc/flounder
 PWD  = $(shell pwd)
