@@ -1,4 +1,4 @@
-obj-m = my_vmalloc.o
+obj-m = my_misc_driver.o
 
 KDIR = /root/htc/flounder
 PWD  = $(shell pwd)
