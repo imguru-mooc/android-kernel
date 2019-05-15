@@ -7,6 +7,27 @@
 
 int main()
 {
+	int fd;
+	int ret;
+	char buff[128];
+	fd = open( "aaa", O_RDONLY);
+    ret = read(fd, buff, 2);
+	write(1, buff, ret );
+    ret = read(fd, buff, 2);
+	write(1, buff, ret );
+	close(fd);
+	return 0;
+}
+#endif
+#if 0
+#include <sys/types.h>
+#include <sys/stat.h>
+#include <fcntl.h>
+#include <stdio.h>
+#include <unistd.h>
+
+int main()
+{
 	int fd1, fd2;
 	int ret;
 	char buff[128];
