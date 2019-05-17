@@ -2,7 +2,7 @@ LOCAL_PATH:= $(call my-dir)
 
 include $(CLEAR_VARS)
 LOCAL_SHARED_LIBRARIES :=  libutils libbinder
-LOCAL_SRC_FILES:= my_server.cpp
+LOCAL_SRC_FILES:= my_server.cpp ILedService.cpp LedService.cpp
 LOCAL_MODULE := my_server
 include $(BUILD_EXECUTABLE)
 

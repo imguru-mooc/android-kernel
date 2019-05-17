@@ -26,5 +26,20 @@ public:
 };
 
 IMPLEMENT_META_INTERFACE(LedService, "android.os.ILedService");
+//----------------------------------------------------------------
+status_t BnLedService::onTransact(
+    uint32_t code, const Parcel& data, Parcel* reply, uint32_t flags)
+{
+    switch (code) {
+        case LED_ON: 
+			{
+				ledOn();
+				return NO_ERROR;
+			} break;
+        default:
+            return BBinder::onTransact(code, data, reply, flags);
+	}
+}
+//-----------------------------------------------------------------
 
 }; // namespace android
